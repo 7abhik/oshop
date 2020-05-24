@@ -1,0 +1,17 @@
+[debug] [2020-05-24T04:41:55.909Z] ----------------------------------------------------------------------
+[debug] [2020-05-24T04:41:55.911Z] Command:       D:\Program file(D)\nodejs\node.exe C:\Users\Abhishek\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js open
+[debug] [2020-05-24T04:41:55.912Z] CLI Version:   8.0.3
+[debug] [2020-05-24T04:41:55.912Z] Platform:      win32
+[debug] [2020-05-24T04:41:55.912Z] Node Version:  v10.15.3
+[debug] [2020-05-24T04:41:55.913Z] Time:          Sun May 24 2020 10:11:55 GMT+0530 (India Standard Time)
+[debug] [2020-05-24T04:41:55.913Z] ----------------------------------------------------------------------
+[debug] [2020-05-24T04:41:55.913Z] 
+[debug] [2020-05-24T04:41:55.924Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-24T04:41:55.924Z] > authorizing via signed-in user
+[debug] [2020-05-24T04:41:55.926Z] [iam] checking project oshop-17e18 for permissions ["firebase.projects.get"]
+[debug] [2020-05-24T04:41:55.934Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/oshop-17e18:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-05-24T04:41:57.454Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 24 May 2020 04:41:57 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1363","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-24T04:41:57.481Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/oshop-17e18  
+ 
+[debug] [2020-05-24T04:41:57.950Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 24 May 2020 04:41:57 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}

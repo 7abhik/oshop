@@ -1,0 +1,11 @@
+<div class="row no-gutters">
+  <div class="col-2">
+    <button (click)="removeFromCart()" class="btn btn-secondary btn-block" role="button" aria-pressed="true">-</button>
+  </div>
+  <div class="col text-center">
+    <div>In Cart {{ shoppingCart.getQuantity(product.key) }}</div>
+  </div>
+  <div class="col-2">
+    <button (click)="addToCart()"  class="btn btn-secondary btn-block" role="button" aria-pressed="true">+</button>
+  </div>
+</div>
