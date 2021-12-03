@@ -1,3 +1,4 @@
+import { RouterModule, RouterLinkActive } from '@angular/router';
 import { ShoppingCartService } from "./../services/shopping-cart.service";
 import { Component, OnInit } from "@angular/core";
 
@@ -14,7 +15,7 @@ export class ShoppingCartComponent implements OnInit {
     this.shoppingCartService.clearCart();
   }
 
-  async ngOnInit() {
+   async ngOnInit() {
     this.cart$ = await this.shoppingCartService.getCart()
   }
 }

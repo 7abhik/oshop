@@ -2,7 +2,7 @@ import { ShoppingCartItem } from "./shopping-cart-item";
 
 export class ShoppingCart {
   items: ShoppingCartItem[] = [];
-  constructor(public itemsMap) {
+  constructor(private itemsMap) {
     this.itemsMap = itemsMap? itemsMap.items: {};
     Object.keys(this.itemsMap).forEach((key) => {
       let item = this.itemsMap[key];

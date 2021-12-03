@@ -16,7 +16,7 @@ export class ShoppingCartService {
     return this.db
       .object("/shopping-carts/" + cartId)
       .valueChanges()
-      .pipe(map((x) => new ShoppingCart(x)));
+      .pipe(map((x) => new ShoppingCart(x)))
   }
 
   async addToCart(product: Product) {

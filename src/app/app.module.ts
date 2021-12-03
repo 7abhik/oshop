@@ -1,5 +1,6 @@
-import { ShoppingCartItem } from './models/shopping-cart-item';
-import { ShoppingCartService } from './services/shopping-cart.service';
+import { OrderService } from "./services/order.service";
+import { ShoppingCartItem } from "./models/shopping-cart-item";
+import { ShoppingCartService } from "./services/shopping-cart.service";
 import { CategoryService } from "./services/category.service";
 import { AdminAuthGuard } from "./services/admin-auth-guard.guard";
 import { UserService } from "./services/user.service";
@@ -14,7 +15,6 @@ import { AngularFireAuthModule } from "@angular/fire/auth";
 import { RouterModule } from "@angular/router";
 import { CustomFormsModule } from "ng2-validation";
 
-
 import { BsNavbarComponent } from "./bs-navbar/bs-navbar.component";
 import { HomeComponent } from "./home/home.component";
 import { ProductsComponent } from "./products/product/products.component";
@@ -28,12 +28,13 @@ import { LoginComponent } from "./login/login.component";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { AuthService } from "./services/auth.service";
 import { AuthGuard } from "./services/auth.guard";
+import { ShippingFormComponent } from "./shipping-form/shipping-form.component";
 import { ProductFormComponent } from "./admin/product-form/product-form.component";
 import { FormsModule } from "@angular/forms";
 import { ProductService } from "./services/product.service";
-import { ProductFilterComponent } from './products/product-filter/product-filter.component';
-import { ProductCardComponent } from './products/product-card/product-card.component';
-import { ProductQuantityComponent } from './product-quantity/product-quantity.component';
+import { ProductFilterComponent } from "./products/product-filter/product-filter.component";
+import { ProductCardComponent } from "./products/product-card/product-card.component";
+import { ProductQuantityComponent } from "./product-quantity/product-quantity.component";
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { ProductQuantityComponent } from './product-quantity/product-quantity.co
     ProductFilterComponent,
     ProductCardComponent,
     ProductQuantityComponent,
+    ShippingFormComponent,
   ],
   imports: [
     NgbModule,
@@ -122,6 +124,7 @@ import { ProductQuantityComponent } from './product-quantity/product-quantity.co
     CategoryService,
     ProductService,
     ShoppingCartService,
+    OrderService,
   ],
 
   bootstrap: [AppComponent],

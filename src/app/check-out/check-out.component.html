@@ -1,3 +1,62 @@
-<p>
-  check-out works!
-</p>
+<div class="row">
+  <div class="col">
+    <form #f="ngForm" (ngSubmit)="placeOrder(f.value)">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" #name="ngModel" [(ngModel)]="nameLL" name="name" placeholder="Name"
+          class="form-control" required>
+        <div *ngIf="name.touched && name.invalid" class="alert alert-danger">Name is Required.</div>
+      </div>
+      <div class="form-group">
+        <label for="line1">Address</label>
+        <input type="text" id="line1" #line1="ngModel" [(ngModel)]="line1LL" name="line1" placeholder="Line 1"
+          name="line1" class="form-control" required>
+        <div *ngIf="line1.touched && line1.invalid" class="alert alert-danger">Address is Required.</div>
+      </div>
+      <div class="form-group">
+        <label for="line2">Address</label>
+        <input type="text" id="line2" #line2="ngModel" [(ngModel)]="line2LL" name="line2" placeholder="Line 2"
+          class="form-control" required>
+        <div *ngIf="line2.touched && line2.invalid" class="alert alert-danger">Detailed Address is Required.</div>
+      </div>
+      <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" name="city" #city="ngModel" id="city" [(ngModel)]="cityLL" placeholder="city"
+          class="form-control" required>
+        <div *ngIf="city.touched && city.invalid" class="alert alert-danger">City Name is Required</div>
+      </div>
+
+      <button class="btn btn-primary">Save</button>
+    </form>
+  </div>
+  <div class="col">
+    <div class="card" style="width: 80%;">
+      <div class="card-body">
+
+        <table>
+          <thead>
+            <h1>Order Summery</h1>
+            <p>You have {{ cart.totalItemsCount}} in your shopping cart</p>
+          </thead>
+          <hr>
+          <tbody>
+            <tr *ngFor="let item of cart.items">
+              <td>{{item.title}} x {{item.quantity}}</td>
+              <td class="text-right">{{item.totalPrice}}</td>
+            </tr>
+          </tbody>
+          <hr>
+          <tfoot>
+            <tr>
+              <th>Total</th>
+              <th class="text-right">{{ cart.totalPrice}}</th>
+            </tr>
+
+          </tfoot>
+        </table>
+
+
+      </div>
+    </div>
+  </div>
+</div>
